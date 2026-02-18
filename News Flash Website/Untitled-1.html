@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsFlash - Your Daily News Source</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border-bottom: 4px solid #ff0000;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff0000;
+        }
+
+        .splash-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero-banner {
+            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+            padding: 60px 40px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+        }
+
+        .hero-banner h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-banner p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .category-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border-left: 5px solid #ff0000;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 0, 0, 0.2);
+        }
+
+        .category-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .category-card h2 {
+            color: #ff0000;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .category-card ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .category-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #444;
+            font-size: 14px;
+        }
+
+        .category-card li:last-child {
+            border-bottom: none;
+        }
+
+        .category-card a {
+            color: #aaaaaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .category-card a:hover {
+            color: #ff0000;
+        }
+
+        .featured-news {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 30px;
+            border-radius: 8px;
+            border-top: 4px solid #ff0000;
+            margin-bottom: 40px;
+        }
+
+        .featured-news h2 {
+            color: #ff0000;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .news-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #444;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-title {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .news-meta {
+            color: #ff0000;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .news-excerpt {
+            color: #cccccc;
+            font-size: 14px;
+        }
+
+        footer {
+            background: #1a1a1a;
+            border-top: 3px solid #ff0000;
+            padding: 30px 20px;
+            text-align: center;
+            color: #aaaaaa;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero-banner h1 {
+                font-size: 32px;
+            }
+
+            .hero-banner {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">📰 NewsFlash</div>
+            <nav>
+                <ul>
+                    <li><a href="#core">Core News</a></li>
+                    <li><a href="#tech">Technology</a></li>
+                    <li><a href="#entertainment">Entertainment</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="splash-container">
+        <div class="hero-banner">
+            <h1>Breaking News Alert!</h1>
+            <p>Stay updated with the latest news from around the world</p>
+        </div>
+
+        <div class="featured-news">
+            <h2>⚡ Top Stories</h2>
+            <div class="news-item">
+                <div class="news-title">Tech Innovations Shape Future Industries</div>
+                <div class="news-meta">Published: November 18, 2024 | Author: Sarah Johnson</div>
+                <div class="news-excerpt">Emerging technologies continue to revolutionize how we work, creating unprecedented opportunities in AI and automation sectors worldwide.</div>
+            </div>
+        </div>
+
+        <div class="categories-grid">
+            <div class="category-card" id="core">
+                <div class="category-icon">📢</div>
+                <h2>Core News</h2>
+                <ul>
+                    <li><a href="#">Breaking News Updates</a></li>
+                    <li><a href="#">National Developments</a></li>
+                    <li><a href="#">Regional News</a></li>
+                    <li><a href="#">International Coverage</a></li>
+                </ul>
+            </div>
+
+            <div class="category-card" id="tech">
+                <div class="category-icon">🖥️</div>
+                <h2>Technology</h2>
+                <ul>
+                    <li><a href="#">AI & Machine Learning</a></li>
+                    <li><a href="#">Cybersecurity</a></li>
+                    <li><a href="#">Gadgets Review</a></li>
+                    <li><a href="#">Social Media</a></li>
+                </ul>
+            </div>
+
+            <div class="category-card" id="entertainment">
+                <div class="category-icon">🎬</div>
+                <h2>Entertainment</h2>
+                <ul>
+                    <li><a href="#">Celebrity News</a></li>
+                    <li><a href="#">Movies & TV</a></li>
+                    <li><a href="#">Music & Arts</a></li>
+                    <li><a href="#">Pop Culture</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NewsFlash - Your Trusted News Source</p>
+        <p>Delivering Quality News By Yours Truly | Stay Informed, And Stay Connected.</p>
+    </footer>
+</body>
+</html>
