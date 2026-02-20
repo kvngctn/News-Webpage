@@ -204,3 +204,16 @@
                 padding: 40px 20px;
             }
         }
+
+        .article text{
+                color: white;
+                font-family: 'Arial', sans-serif;
+                font-size: var(--theme-semantic-type-body-xl-font-size);
+                font-style: normal;
+                font-weight: 400;
+                line-height: var(--primitive-size-32);
+                letter-spacing: var(--theme-semantic-type-body-letter-spacing);
+                margin-block-start: var(--primitive-size-none);
+                margin-block-end: var(--primitive-size-24);
+                margin-bottom: var(--primitive-size-24);
+        }
