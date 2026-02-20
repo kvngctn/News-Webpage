@@ -205,7 +205,46 @@
             }
         }
 
-        .article text{
+        .headline_inline{
+             border-inline-start: 12px solid #c00;
+             padding-inline-start: 20px;
+             font-size: 2rem;
+             line-height: 2.5rem;
+        }
+        
+        .headline_text{
+            color: white;
+            font-family: 'Arial', sans-serif;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 45px;
+            letter-spacing: 0;
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 24px;
+        }
+
+        .article_author{
+                color: white;
+                font-family: 'Arial', sans-serif;    
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0;
+        }
+
+        .article_image{
+                width: 100%;
+                max-width: 660px;
+                margin-inline: 0;
+                position: relative;
+                inset-inline: 0;
+        }
+
+        .article_text{
                 color: white;
                 font-family: 'Arial', sans-serif;
                 font-size: var(--theme-semantic-type-body-xl-font-size);
