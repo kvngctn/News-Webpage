@@ -218,17 +218,24 @@
             font-size: 60px;      /* bigger */
             font-weight: 700;
             line-height: 70px;    /* adjust spacing between lines */
-            margin-bottom: 24px;
+            margin-bottom: 16px;
+        }
+
+        .article_container{
+            max-width: 800px;   /* controls text width */
+            margin: 40px auto;  /* centers the whole article */
+            padding: 0 20px;    /* spacing on small screens */
         }
 
         .article_author{
-                color: white;
+                color: #ff4d4d;
                 font-family: 'Arial', sans-serif;    
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 20px;
                 letter-spacing: 0;
+                margin-bottom: 16px;
         }
 
         .article_image{
@@ -247,9 +254,4 @@
                 font-size: 25px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: var(--primitive-size-32);
-                letter-spacing: var(--theme-semantic-type-body-letter-spacing);
-                margin-block-start: var(--primitive-size-none);
-                margin-block-end: var(--primitive-size-24);
-                margin-bottom: var(--primitive-size-24);
         }
